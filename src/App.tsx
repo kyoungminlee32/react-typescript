@@ -3,6 +3,9 @@ import logo from './logo.svg';
 // import './App.css';
 import styled from '@emotion/styled';
 import { keyframes } from '@emotion/react'; // keyframes 임포트 필요
+import { Routes, Route } from 'react-router-dom'; // Routes, Route 임포트 문장 추가!
+import Hello from './Hello';
+import StateComponent1 from './example/StateComponent1'; // 보여줄 컴포넌트 임포트
 
 // 1. 애니메이션 키프레임 정의
 const spin = keyframes`
@@ -45,6 +48,15 @@ function App() {
   return (
     // <div className='App'>
     <AppContainer>
+      {/* 주소에 따라 유동적으로 컴포넌트가 바뀌는 영역 */}
+      <Routes>
+        {/* 기본 메인 홈 주소 (http://localhost:3000/) */}
+        <Route path='/' element={<Hello name='flature' color='blue' />} />
+
+        {/* 💡 요청하신 특정 주소와 컴포넌트를 연결하는 핵심 설정 */}
+        <Route path='/example/StateComponent1' element={<StateComponent1 />} />
+      </Routes>
+      {/* 
       <AppHeader>
         <AppLogo src={logo} alt={'logo'} />
         <p>
@@ -58,7 +70,10 @@ function App() {
         >
           Learn React
         </AppLink>
-      </AppHeader>
+        <Hello name={'tomy'} color={'red'} />
+        <Hello name='army' color='#ff0' />
+        <Hello />
+      </AppHeader> */}
     </AppContainer>
     // </div>
   );

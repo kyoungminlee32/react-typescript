@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
     "target": "esnext",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -18,9 +14,9 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    /* 💡 이 설정을 추가하면 .css 같은 임의의 확장자 import 에러가 사라집니다 */
+    "allowArbitraryExtensions": true
   },
-  "include": [
-    "src"
-  ]
+  "include": ["src"]
 }
