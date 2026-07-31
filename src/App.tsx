@@ -6,6 +6,7 @@ import { keyframes } from '@emotion/react'; // keyframes 임포트 필요
 import { Routes, Route } from 'react-router-dom'; // Routes, Route 임포트 문장 추가!
 import Hello from './Hello';
 import StateComponent1 from './example/StateComponent1'; // 보여줄 컴포넌트 임포트
+import StateComponent2 from './example/StateComponent2'; // 보여줄 컴포넌트 임포트
 
 // 1. 애니메이션 키프레임 정의
 const spin = keyframes`
@@ -53,8 +54,10 @@ function App() {
         {/* 기본 메인 홈 주소 (http://localhost:3000/) */}
         <Route path='/' element={<Hello name='flature' color='blue' />} />
 
-        {/* 💡 요청하신 특정 주소와 컴포넌트를 연결하는 핵심 설정 */}
+        {/* 요청하신 특정 주소와 컴포넌트를 연결하는 핵심 설정 */}
         <Route path='/example/StateComponent1' element={<StateComponent1 />} />
+        {/* 요청하신 특정 주소와 컴포넌트를 연결하는 핵심 설정 */}
+        <Route path='/example/StateComponent2' element={<StateComponent2 />} />
       </Routes>
       {/* 
       <AppHeader>
