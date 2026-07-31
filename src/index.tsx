@@ -10,7 +10,8 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    {/* 💡 basename 설정을 추가하여 레포지토리 경로를 기본값으로 잡습니다 */}
+    <BrowserRouter basename='/react-typescript'>
       {/* 전체 앱을 BrowserRouter로 감싸줍니다 */}
       <App />
     </BrowserRouter>
