@@ -4,14 +4,15 @@ import logo from './logo.svg';
 import styled from '@emotion/styled';
 import { keyframes } from '@emotion/react'; // keyframes 임포트 필요
 import { Routes, Route } from 'react-router-dom'; // Routes, Route 임포트 문장 추가!
-import Hello from './Hello';
-import StateComponent1 from './example/StateComponent1'; // 보여줄 컴포넌트 임포트
-import StateComponent2 from './example/StateComponent2'; // 보여줄 컴포넌트 임포트
-import NoneContext from './example/Context/NoneContext'; // 보여줄 컴포넌트 임포트
-import ContextExample from './example/Context/Context'; // 보여줄 컴포넌트 임포트
-import Context2 from './example/Context/Context2'; // 보여줄 컴포넌트 임포트
+// import Hello from './Hello';
+// import StateComponent1 from './example/StateComponent1'; // 보여줄 컴포넌트 임포트
+// import StateComponent2 from './example/StateComponent2'; // 보여줄 컴포넌트 임포트
+// import NoneContext from './example/Context/NoneContext'; // 보여줄 컴포넌트 임포트
+// import ContextExample from './example/Context/Context'; // 보여줄 컴포넌트 임포트
+// import Context2 from './example/Context/Context2'; // 보여줄 컴포넌트 임포트
+// import Example1 from './pages/Example1'; // 보여줄 컴포넌트 임포트
 import Layout from './layouts/Layout'; // 보여줄 컴포넌트 임포트
-import Example1 from './pages/Example1'; // 보여줄 컴포넌트 임포트
+import { MENU_ITEMS } from './components/Header/menuData';
 
 // 1. 애니메이션 키프레임 정의
 const spin = keyframes`
@@ -57,30 +58,25 @@ function App() {
       <Layout>
         {/* 주소에 따라 유동적으로 컴포넌트가 바뀌는 영역 */}
         <Routes>
-          {/* 기본 메인 홈 주소 (http://localhost:3000/) */}
-          <Route path='/' element={<Hello name='flature' color='blue' />} />
-
-          {/* 요청하신 특정 주소와 컴포넌트를 연결하는 핵심 설정 */}
+          {/* <Route path='/' element={<Hello name='flature' color='blue' />} />
           <Route
             path='/example/StateComponent1'
             element={<StateComponent1 />}
           />
-          {/* 요청하신 특정 주소와 컴포넌트를 연결하는 핵심 설정 */}
           <Route
             path='/example/StateComponent2'
             element={<StateComponent2 />}
           />
-          {/* 요청하신 특정 주소와 컴포넌트를 연결하는 핵심 설정 */}
           <Route
             path='/example/Context/NoneContext'
             element={<NoneContext />}
           />
-          {/* 요청하신 특정 주소와 컴포넌트를 연결하는 핵심 설정 */}
           <Route path='/example/Context/Context' element={<ContextExample />} />
-          {/* 요청하신 특정 주소와 컴포넌트를 연결하는 핵심 설정 */}
           <Route path='/example/Context/Context2' element={<Context2 />} />
-          {/* 요청하신 특정 주소와 컴포넌트를 연결하는 핵심 설정 */}
-          <Route path='/pages/Example1' element={<Example1 />} />
+          <Route path='/pages/Example1' element={<Example1 />} /> */}
+          {MENU_ITEMS.map((item) => (
+            <Route key={item.to} path={item.to} element={item.element} />
+          ))}
         </Routes>
         {/* 
       <AppHeader>
