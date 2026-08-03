@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { Link } from 'react-router-dom'; // Link 추가!
+import { MENU_ITEMS } from './menuData';
 
 const Container = styled.header`
   display: flex;
@@ -13,11 +14,13 @@ const Container = styled.header`
 const Logo = styled.img`
   height: 40px;
 `;
-const Nav = styled.nav`
+const Nav = styled.ul`
   display: flex;
   gap: 1rem;
+  list-style: none;
 `;
-const NavLink = styled(Link)`
+const MenuItem = styled.li``;
+const MenuLink = styled(Link)`
   text-decoration: none;
   color: #333;
   &:hover {
@@ -29,13 +32,11 @@ const Header = () => {
   return (
     <Container>
       <Nav>
-        <NavLink to='/'>Home</NavLink>
-        <NavLink to='/example/StateComponent1'>StateComponent1</NavLink>
-        <NavLink to='/example/StateComponent2'>StateComponent2</NavLink>
-        <NavLink to='/example/Context/NoneContext'>NoneContext</NavLink>
-        <NavLink to='/example/Context/Context'>Context</NavLink>
-        <NavLink to='/example/Context/Context2'>Context2</NavLink>
-        <NavLink to='/pages/Example1'>Example1</NavLink>
+        {MENU_ITEMS?.map((item) => (
+          <MenuItem key={item.to}>
+            <MenuLink to={item.to}>{item.label}</MenuLink>
+          </MenuItem>
+        ))}
       </Nav>
     </Container>
   );
