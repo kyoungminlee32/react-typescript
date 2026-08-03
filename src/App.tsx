@@ -50,6 +50,9 @@ const AppLogo = styled.img`
 const AppLink = styled.a`
   color: #61dafb;
 `;
+const NotFound = styled.div`
+  text-align: center;
+`;
 
 function App() {
   return (
@@ -77,6 +80,15 @@ function App() {
           {MENU_ITEMS.map((item) => (
             <Route key={item.to} path={item.to} element={item.element} />
           ))}
+          <Route
+            path='*'
+            element={
+              <NotFound>
+                <h2>404</h2>
+                <p>요청하신 페이지를 찾을 수 없습니다.</p>
+              </NotFound>
+            }
+          />
         </Routes>
         {/* 
       <AppHeader>

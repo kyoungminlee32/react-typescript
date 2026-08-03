@@ -6,7 +6,6 @@ import NoneContext from '../../example/Context/NoneContext';
 import ContextExample from '../../example/Context/Context';
 import Context2 from '../../example/Context/Context2';
 import Example1 from '../../pages/Example1';
-
 export interface MenuItemType {
   to: string;
   label: string;
@@ -16,25 +15,25 @@ export interface MenuItemType {
 export const MENU_ITEMS: MenuItemType[] = [
   { to: '/', label: 'Home', element: <Hello name='flature' color='blue' /> },
   {
-    to: '/example/StateComponent1',
+    to: 'StateComponent1',
     label: 'StateComponent1',
     element: <StateComponent1 />,
   },
   {
-    to: '/example/StateComponent2',
+    to: 'StateComponent2',
     label: 'StateComponent2',
     element: <StateComponent2 />,
   },
   {
-    to: '/example/Context/NoneContext',
+    to: 'NoneContext',
     label: 'NoneContext',
     element: <NoneContext />,
   },
   {
-    to: '/example/Context/Context',
+    to: 'Context',
     label: 'Context',
     element: <ContextExample />,
   },
-  { to: '/example/Context/Context2', label: 'Context2', element: <Context2 /> },
-  { to: '/pages/Example1', label: 'Example1', element: <Example1 /> },
+  { to: 'Context2', label: 'Context2', element: <Context2 /> },
+  { to: 'Example', label: 'Example1', element: <Example1 /> },
 ];
