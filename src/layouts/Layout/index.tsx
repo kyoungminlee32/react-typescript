@@ -1,0 +1,40 @@
+import styled from '@emotion/styled';
+import Header from '../../components/Header';
+import Sidebar from '../../components/Sidebar';
+import Footer from '../../components/Footer';
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+`;
+const Content = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+const Main = styled.main`
+  flex: 1;
+  min-height: calc(100vh - 17rem);
+`;
+
+interface Props {
+  children: React.ReactNode;
+}
+
+const Layout = (props: Props) => {
+  return (
+    <Container>
+      {/* 헤더 */}
+      <Header />
+      <Content>
+        {/* 사이드바 */}
+        <Sidebar />
+        <Main>{props.children}</Main>
+      </Content>
+      {/* 푸터 */}
+      <Footer />
+    </Container>
+  );
+};
+
+export default Layout;
