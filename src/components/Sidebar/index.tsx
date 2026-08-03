@@ -20,6 +20,7 @@ const SidebarContainer = styled.aside`
     border-right: none;
     border-bottom: 1px solid #ccc;
     padding: 1rem;
+    display: none;
   }
 `;
 

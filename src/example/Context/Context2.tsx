@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from '@emotion/styled';
 import { TodoProvider } from '../../components/ContextExample/Context';
 import TodoForm from '../../components/ContextExample/Context/ToDoForm';

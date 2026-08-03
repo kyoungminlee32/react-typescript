@@ -21,6 +21,7 @@ const Main = styled.main`
   min-height: calc(100vh - 17rem);
   @media (max-width: 768px) {
     min-height: auto;
+    padding: 2rem;
   }
 `;
 

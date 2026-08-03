@@ -3,27 +3,16 @@ import { Link } from 'react-router-dom';
 import { MENU_ITEMS } from './menuData';
 
 const Container = styled.header`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   padding: 1rem;
   background-color: #fff;
   border-bottom: 1px solid #ccc;
-  min-height: 3rem;
-  width: 100%;
   box-sizing: border-box; /* 패딩이 너비를 벗어나지 않도록 고정 */
 
   /* 📱 화면 가로가 768px 이하로 줄어들었을 때 실행 */
   @media (max-width: 768px) {
-    flex-direction: column; /* 세로 정렬로 강제 변경 */
-    gap: 1rem;
-    align-items: flex-start; /* 모바일에서는 왼쪽으로 정렬 */
   }
 `;
-
 const Nav = styled.ul`
-  display: flex;
-  gap: 1rem;
   list-style: none;
   padding: 0; /* 브라우저 기본 기본 여백 초기화 필수! */
   margin: 0;
@@ -32,12 +21,17 @@ const Nav = styled.ul`
   flex-wrap: wrap;
 
   @media (max-width: 768px) {
-    gap: 0.8rem;
-    width: 100%; /* 모바일에서 너비 꽉 채우기 */
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
   }
 `;
 
-const MenuItem = styled.li``;
+const MenuItem = styled.li`
+  padding: 1rem;
+  display: inline-block;
+`;
 
 const MenuLink = styled(Link)`
   text-decoration: none;
