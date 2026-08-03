@@ -11,10 +11,17 @@ const Container = styled.div`
 const Content = styled.div`
   display: flex;
   flex-direction: row;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    flex: 1;
+  }
 `;
 const Main = styled.main`
   flex: 1;
   min-height: calc(100vh - 17rem);
+  @media (max-width: 768px) {
+    min-height: auto;
+  }
 `;
 
 interface Props {
