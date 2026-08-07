@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { MENU_ITEMS } from '../Header/menuData';
 
 const SidebarContainer = styled.aside`
@@ -44,7 +44,7 @@ const SidebarItem = styled.li`
   /* 기존 margin 제거하고 gap으로 통일하여 레이아웃 안정화 */
 `;
 
-const SidebarLink = styled(Link)`
+const SidebarLink = styled(NavLink)`
   text-decoration: none;
   color: #333;
   font-weight: 500;
@@ -54,6 +54,9 @@ const SidebarLink = styled(Link)`
   &:hover {
     text-decoration: underline;
     color: #007bff; /* 마우스 올렸을 때 포인트 컬러 */
+  }
+  &.active {
+    color: #0000ff;
   }
 
   @media (max-width: 768px) {

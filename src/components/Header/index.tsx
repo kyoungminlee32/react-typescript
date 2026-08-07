@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { MENU_ITEMS } from './menuData';
 
 const Container = styled.header`
@@ -33,7 +33,7 @@ const MenuItem = styled.li`
   display: inline-block;
 `;
 
-const MenuLink = styled(Link)`
+const MenuLink = styled(NavLink)`
   text-decoration: none;
   color: #333;
   display: inline-block;
@@ -41,6 +41,9 @@ const MenuLink = styled(Link)`
 
   &:hover {
     text-decoration: underline;
+  }
+  &.active {
+    color: #0000ff;
   }
 `;
 

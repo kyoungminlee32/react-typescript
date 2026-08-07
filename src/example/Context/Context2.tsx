@@ -3,13 +3,7 @@ import { TodoProvider } from '../../components/ContextExample/Context';
 import TodoForm from '../../components/ContextExample/Context/ToDoForm';
 import { TodoList } from '../../components/ContextExample/Context/ToDoList';
 
-const TodoListContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-`;
+const TodoListContainer = styled.div``;
 
 const Context2 = () => {
   return (
