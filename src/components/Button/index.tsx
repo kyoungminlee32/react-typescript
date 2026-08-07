@@ -1,6 +1,9 @@
 import styled from '@emotion/styled';
 
-const Container = styled.button``;
+const Container = styled.button`
+  padding: 1rem;
+  border-radius: 0;
+`;
 
 interface Props {
   label: string;
