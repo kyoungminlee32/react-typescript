@@ -12,7 +12,7 @@ export interface MenuItemType {
   element: React.ReactNode;
 }
 
-export const MENU_ITEMS: MenuItemType[] = [
+const COMMON_MENU_LIST: MenuItemType[] = [
   { to: '/', label: 'Home', element: <Hello name='flature' color='blue' /> },
   {
     to: 'StateComponent1',
@@ -37,3 +37,7 @@ export const MENU_ITEMS: MenuItemType[] = [
   { to: 'Context2', label: 'Context2', element: <Context2 /> },
   { to: 'Example', label: 'Example1', element: <Example1 /> },
 ];
+
+export const MENU_ITEMS: MenuItemType[] = [...COMMON_MENU_LIST];
+
+export const HEADER_MENU_ITEMS: MenuItemType[] = [...COMMON_MENU_LIST];

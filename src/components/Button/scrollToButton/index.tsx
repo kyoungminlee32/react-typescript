@@ -68,8 +68,13 @@ export const Button = ({ label, onClick }: Props) => {
 
   // 탑버튼 클릭했을때 실행되는 이벤트
   const handleClick = () => {
-    navigate('/');
-    scrollToTop();
+    // 1. 부모 컴포넌트에서 넘겨준 커스텀 onClick이 있다면 실행합니다.
+    if (onClick) {
+      onClick();
+    } else {
+      navigate('/');
+      scrollToTop();
+    }
   };
 
   return (
