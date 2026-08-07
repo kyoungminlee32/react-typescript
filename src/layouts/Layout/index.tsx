@@ -19,6 +19,7 @@ const Content = styled.div`
 const Main = styled.main`
   flex: 1;
   min-height: calc(100vh - 17rem);
+  padding: 2rem;
   @media (max-width: 768px) {
     min-height: auto;
     padding: 2rem;

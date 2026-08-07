@@ -18,5 +18,3 @@ const Context2 = () => {
 };
 
 export default Context2;
-
-<style></style>;
