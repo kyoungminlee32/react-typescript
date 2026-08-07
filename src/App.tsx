@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
-// import './App.css';
+import './App.css';
 import styled from '@emotion/styled';
 import { keyframes } from '@emotion/react'; // keyframes 임포트 필요
 import { Routes, Route } from 'react-router-dom'; // Routes, Route 임포트 문장 추가!
