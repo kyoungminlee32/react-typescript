@@ -6,7 +6,7 @@ const SidebarContainer = styled.aside`
   /* 1. 시맨틱 태그 aside 권장 */
   display: flex;
   flex-direction: column;
-  padding: 1.5rem;
+  padding: 9rem 1.5rem 1.5rem;
   background-color: #f5f5f5;
   min-width: 12rem;
   box-sizing: border-box;
@@ -48,6 +48,7 @@ const SidebarLink = styled(NavLink)`
   text-decoration: none;
   color: #333;
   font-weight: 500;
+  font-size: 1.6rem;
   display: block;
   padding: 0.3rem 0;
 
