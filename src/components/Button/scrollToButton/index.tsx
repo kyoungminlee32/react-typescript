@@ -66,8 +66,6 @@ export const Button = ({ label, onClick }: Props) => {
       top: 0,
       behavior: 'smooth',
     });
-    document.documentElement.scrollTop = 0;
-    document.body.scrollTop = 0;
   };
 
   // if (!showButton) return null;
@@ -78,10 +76,10 @@ export const Button = ({ label, onClick }: Props) => {
     if (onClick) {
       onClick();
     } else {
-      scrollToTop();
       setTimeout(() => {
+        scrollToTop();
         navigate('/');
-      }, 0);
+      }, 150);
     }
   };
 
