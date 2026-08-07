@@ -1,6 +1,9 @@
 import styled from '@emotion/styled';
 
 const Container = styled.footer`
+  position: fixed;
+  bottom: 0;
+  width: 100%;
   color: #fff;
   padding: 2rem;
   background-color: #333;

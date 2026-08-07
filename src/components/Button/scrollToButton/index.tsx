@@ -1,4 +1,4 @@
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import styled from '@emotion/styled';
 const Container = styled.button`
@@ -38,7 +38,7 @@ interface Props {
 }
 
 export const Button = ({ label, onClick }: Props) => {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const [showButton, setShowButton] = useState(false);
 
@@ -68,7 +68,7 @@ export const Button = ({ label, onClick }: Props) => {
 
   // 탑버튼 클릭했을때 실행되는 이벤트
   const handleClick = () => {
-    // navigate('/');
+    navigate('/');
     scrollToTop();
   };
 

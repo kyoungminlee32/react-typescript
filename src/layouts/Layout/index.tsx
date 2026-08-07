@@ -20,12 +20,11 @@ const Content = styled.div`
 const Main = styled.main`
   flex: 1;
   min-height: calc(100vh - 17rem);
-  padding: 2rem;
+  padding: 2rem 2rem 13rem;
   font-size: 1.6rem;
   margin-top: 9rem;
   @media (max-width: 768px) {
     min-height: auto;
-    padding: 2rem;
   }
 `;
 
