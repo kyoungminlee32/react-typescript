@@ -5,6 +5,8 @@ const Container = styled.button`
   position: fixed;
   right: 1rem;
   bottom: 13rem;
+  padding: 1rem;
+  border-radius: 0;
   z-index: 1000;
 
   /* 💡 기본 상태 (숨겨진 상태): 아래로 2rem 내려가 있고 투명함 */
