@@ -76,8 +76,10 @@ export const Button = ({ label, onClick }: Props) => {
     if (onClick) {
       onClick();
     } else {
-      navigate('/');
       scrollToTop();
+      setTimeout(() => {
+        navigate('/');
+      }, 0);
     }
   };
 
