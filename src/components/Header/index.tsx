@@ -64,35 +64,32 @@ const Header = () => {
   const location = useLocation();
 
   // 💡 3. 탑버튼 클릭 등 외부 요인으로 주소(location)가 바뀔 때 실행되는 로직
-  useEffect(() => {
-    // 페이지 진입 및 active 클래스가 DOM에 완전히 입혀질 때까지 시간을 0.15초 확보합니다.
-    const timer = setTimeout(() => {
-      if (!scrollContainerRef.current) return;
+  // useEffect(() => {
+  //   // 페이지 진입 및 active 클래스가 DOM에 완전히 입혀질 때까지 시간을 0.15초 확보합니다.
+  //   const timer = setTimeout(() => {
+  //     if (!scrollContainerRef.current) return;
 
-      // 현재 활성화된 '.active' 클래스를 가진 요소를 찾습니다.
-      const activeLink = scrollContainerRef.current.querySelector(
-        '.active'
-      ) as HTMLAnchorElement;
+  //     // 현재 활성화된 '.active' 클래스를 가진 요소를 찾습니다.
+  //     const activeLink = scrollContainerRef.current.querySelector('.active') as HTMLAnchorElement;
 
-      if (activeLink) {
-        const parentLi = activeLink.parentElement;
+  //     if (activeLink) {
+  //       const parentLi = activeLink.parentElement;
 
-        if (parentLi) {
-          // 정밀한 가로 offset 위치 계산
-          const targetLeft =
-            parentLi.offsetLeft - scrollContainerRef.current.offsetLeft;
+  //       if (parentLi) {
+  //         // 정밀한 가로 offset 위치 계산
+  //         const targetLeft = parentLi.offsetLeft - scrollContainerRef.current.offsetLeft;
 
-          // 헤더 메뉴바의 가로 스크롤을 'Home' 혹은 해당 메뉴 위치로 부드럽게 밀어줍니다.
-          scrollContainerRef.current.scrollTo({
-            left: targetLeft,
-            behavior: 'smooth',
-          });
-        }
-      }
-    }, 150); // 💡 타임아웃을 150ms로 살짝 늘려 안정성을 확보합니다.
+  //         // 헤더 메뉴바의 가로 스크롤을 'Home' 혹은 해당 메뉴 위치로 부드럽게 밀어줍니다.
+  //         scrollContainerRef.current.scrollTo({
+  //           left: targetLeft,
+  //           behavior: 'smooth',
+  //         });
+  //       }
+  //     }
+  //   }, 150); // 💡 타임아웃을 150ms로 살짝 늘려 안정성을 확보합니다.
 
-    return () => clearTimeout(timer);
-  }, [location]); // 💡 주소창이 바뀔 때마다 이 스크롤 로직이 매번 강제로 발동합니다!
+  //   return () => clearTimeout(timer);
+  // }, [location]); // 💡 주소창이 바뀔 때마다 이 스크롤 로직이 매번 강제로 발동합니다!
 
   // 2. 메뉴 클릭 시 실행될 이동 핸들러 함수
   const handleMenuClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -105,7 +102,10 @@ const Header = () => {
     if (scrollContainerRef.current && parentLi) {
       const targetLeft =
         parentLi.offsetLeft - scrollContainerRef.current.offsetLeft;
-      scrollContainerRef.current.scrollLeft = targetLeft;
+      scrollContainerRef.current.scrollTo({
+        left: targetLeft,
+        behavior: 'smooth',
+      });
     }
   };
   return (
