@@ -7,6 +7,8 @@ const Container = styled.button`
   bottom: 13rem;
   padding: 1rem;
   border-radius: 0;
+  color: inherit;
+  border: 1px solid #ccc;
   z-index: 1000;
 
   /* 💡 기본 상태 (숨겨진 상태): 아래로 2rem 내려가 있고 투명함 */
