@@ -105,10 +105,7 @@ const Header = () => {
     if (scrollContainerRef.current && parentLi) {
       const targetLeft =
         parentLi.offsetLeft - scrollContainerRef.current.offsetLeft;
-      scrollContainerRef.current.scrollTo({
-        left: targetLeft,
-        // behavior: 'smooth',
-      });
+      scrollContainerRef.current.scrollLeft = targetLeft;
     }
   };
   return (
