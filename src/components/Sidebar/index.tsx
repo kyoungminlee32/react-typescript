@@ -6,7 +6,7 @@ const SidebarContainer = styled.aside`
   /* 1. 시맨틱 태그 aside 권장 */
   display: flex;
   flex-direction: column;
-  padding: 9rem 1.5rem 1.5rem;
+  padding: 11rem 1.5rem 1.5rem;
   background-color: #f5f5f5;
   min-width: 12rem;
   box-sizing: border-box;
