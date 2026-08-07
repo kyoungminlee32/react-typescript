@@ -23,7 +23,7 @@ const Nav = styled.ul`
   display: flex;
   white-space: nowrap;
   overflow-x: auto;
-  // scroll-behavior: smooth;
+  scroll-behavior: smooth;
   /* ✅ [추가] 아이폰(iOS)에서 스크롤을 부드럽고 가볍게 만들어주는 관성 스크롤 속성 */
   -webkit-overflow-scrolling: touch;
   &::-webkit-scrollbar {
@@ -107,7 +107,7 @@ const Header = () => {
         parentLi.offsetLeft - scrollContainerRef.current.offsetLeft;
       scrollContainerRef.current.scrollTo({
         left: targetLeft,
-        behavior: 'smooth',
+        // behavior: 'smooth',
       });
     }
   };
