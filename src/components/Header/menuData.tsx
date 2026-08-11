@@ -6,6 +6,8 @@ import NoneContext from '../../example/Context/NoneContext';
 import ContextExample from '../../example/Context/Context';
 import Context2 from '../../example/Context/Context2';
 import Example1 from '../../pages/Example1';
+import BlogPosts from '../../pages/BlogPosts';
+import Photo from '../../pages/Photo';
 export interface MenuItemType {
   to: string;
   label: string;
@@ -36,6 +38,8 @@ const COMMON_MENU_LIST: MenuItemType[] = [
   },
   { to: 'Context2', label: 'Context2', element: <Context2 /> },
   { to: 'Example', label: 'Example1', element: <Example1 /> },
+  { to: 'BlogPost', label: 'BlogPost', element: <BlogPosts /> },
+  { to: 'Photo', label: 'Photo', element: <Photo /> },
 ];
 
 export const MENU_ITEMS: MenuItemType[] = [...COMMON_MENU_LIST];

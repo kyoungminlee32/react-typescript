@@ -22,7 +22,7 @@ const Main = styled.main`
   min-height: calc(100vh - 17rem);
   padding: 2rem 2rem 13rem;
   font-size: 1.6rem;
-  margin-top: 9rem;
+  margin-top: 11rem;
   @media (max-width: 768px) {
     min-height: auto;
   }

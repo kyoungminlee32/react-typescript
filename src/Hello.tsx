@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+
 interface Props {
   name?: string;
   color?: string;
@@ -8,6 +10,14 @@ interface Props {
 // };
 
 function Hello({ name = 'flature', color = 'blue' }: Props) {
+  // 💡 홈 화면이 켜지는 순간(렌더링 완료 직후) 스크롤을 맨 위로 올립니다.
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  }, []);
+
   return (
     <>
       <div style={{ color }}>Hello, {name}</div>

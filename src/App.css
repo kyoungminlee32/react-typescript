@@ -1,7 +1,10 @@
 html {
   font-size: 62.5%;
 }
-
+html,
+body {
+  overscroll-behavior-y: none;
+}
 .App {
   text-align: center;
 }
