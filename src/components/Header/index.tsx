@@ -8,7 +8,7 @@ const Container = styled.header`
   top: 0;
   width: 100%;
   box-sizing: border-box;
-  background-color: #8176f5;
+  background-color: #fff;
   border-bottom: 1px solid #ccc;
   z-index: 1000;
 

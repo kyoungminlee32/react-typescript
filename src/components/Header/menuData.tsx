@@ -8,6 +8,7 @@ import Context2 from '../../example/Context/Context2';
 import Example1 from '../../pages/Example1';
 import BlogPosts from '../../pages/BlogPosts';
 import Photo from '../../pages/Photo';
+import { TodoListElement } from '../../pages/TodoLIst';
 export interface MenuItemType {
   to: string;
   label: string;
@@ -40,6 +41,7 @@ const COMMON_MENU_LIST: MenuItemType[] = [
   { to: 'Example', label: 'Example1', element: <Example1 /> },
   { to: 'BlogPost', label: 'BlogPost', element: <BlogPosts /> },
   { to: 'Photo', label: 'Photo', element: <Photo /> },
+  { to: 'TodoLIst', label: 'TodoLIstLabel', element: <TodoListElement /> },
 ];
 
 export const MENU_ITEMS: MenuItemType[] = [...COMMON_MENU_LIST];
